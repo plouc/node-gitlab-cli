@@ -20,61 +20,73 @@ gitlab builds -h
 #### List project builds
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds&quot;
+gitlab builds list
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds list
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds&quot;
 ```
 
 #### List commit builds
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds&quot;
+gitlab builds commit
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds commit
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds&quot;
 ```
 
 #### Get a single build
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8&quot;
+gitlab builds get
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds get
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8&quot;
 ```
 
 #### Get build artifacts
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts&quot;
+gitlab builds artifacts
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds artifacts
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts&quot;
 ```
 
 #### Cancel a build
 
 ```bash
-curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/cancel&quot;
+gitlab builds cancel
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds cancel
+curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/cancel&quot;
 ```
 
 #### Retry a build
 
 ```bash
-curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/retry&quot;
+gitlab builds retry
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab builds retry
+curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/retry&quot;
 ```
 
 #### Erase a build
@@ -94,41 +106,49 @@ gitlab labels -h
 #### List labels
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/1/labels
+gitlab labels list
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab labels list
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/1/labels
 ```
 
 #### Create a new label
 
 ```bash
-curl --data &quot;name=feature&amp;color=#5843AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
+gitlab labels add
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab labels add
+curl --data &quot;name=feature&amp;color=#5843AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
 ```
 
 #### Delete a label
 
 ```bash
-curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels?name=bug&quot;
+gitlab labels rm
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab labels rm
+curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels?name=bug&quot;
 ```
 
 #### Edit an existing label
 
 ```bash
-curl -X PUT --data &quot;name=documentation&amp;new_name=docs&amp;color=#8E44AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
+gitlab labels update
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab labels update
+curl -X PUT --data &quot;name=documentation&amp;new_name=docs&amp;color=#8E44AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
 ```
 
 ### merge_requests
@@ -172,11 +192,13 @@ gitlab merge_requests update
 #### Delete a merge request
 
 ```bash
-curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/4/merge_request/85
+gitlab merge_requests rm
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab merge_requests rm
+curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/4/merge_request/85
 ```
 
 #### 
@@ -188,11 +210,13 @@ gitlab merge_requests accept
 #### List issues that will close on merge
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/76/merge_requests/1/closes_issues
+gitlab merge_requests closes
 ```
 
+##### **curl** alternative
+
 ```bash
-gitlab merge_requests closes
+curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/76/merge_requests/1/closes_issues
 ```
 
 ### projects
