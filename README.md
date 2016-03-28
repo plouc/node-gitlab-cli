@@ -1,5 +1,9 @@
 # node-gitlab-cli
 
+- [labels](https://github.com/plouc/node-gitlab-cli#labels)
+- [projects](https://github.com/plouc/node-gitlab-cli#projects)
+
+
 ## Available commands
 
 
