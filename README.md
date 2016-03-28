@@ -14,7 +14,7 @@
 
 ### builds
 
-List builds commands
+List available **builds** commands
 
 ```bash
 gitlab builds -h
@@ -100,7 +100,7 @@ gitlab builds rm
 
 ### keys
 
-List keys commands
+List available **keys** commands
 
 ```bash
 gitlab keys -h
@@ -114,7 +114,7 @@ gitlab keys getKey
 
 ### labels
 
-List labels commands
+List available **labels** commands
 
 ```bash
 gitlab labels -h
@@ -170,7 +170,7 @@ curl -X PUT --data "name=documentation&new_name=docs&color=#8E44AD" -H "PRIVATE-
 
 ### merge_requests
 
-List merge_requests commands
+List available **merge_requests** commands
 
 ```bash
 gitlab merge_requests -h
@@ -238,7 +238,7 @@ curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" https://gitlab.example.com/api/v3/
 
 ### projects
 
-List projects commands
+List available **projects** commands
 
 ```bash
 gitlab projects -h
