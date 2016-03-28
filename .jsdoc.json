@@ -1,0 +1,16 @@
+{
+  "readme": "README.md",
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "source": {
+    "includePattern": "\\/api\\/.+\\.js$"
+  },
+  "opts": {
+    "template": "node_modules/docdash/",
+    "encoding": "utf8",
+    "destination": "../node-gitlab-client-doc/",
+    "recurse": true,
+    "verbose": true
+  }
+}

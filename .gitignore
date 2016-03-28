@@ -1,0 +1,7 @@
+node_modules
+lib
+.env
+.idea
+npm-debug.log*
+docs
+/src/client.js
