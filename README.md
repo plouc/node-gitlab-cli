@@ -1,5 +1,7 @@
 # node-gitlab-cli
 
+## scopes
+
 - [builds](https://github.com/plouc/node-gitlab-cli#builds)
 - [keys](https://github.com/plouc/node-gitlab-cli#keys)
 - [labels](https://github.com/plouc/node-gitlab-cli#labels)
