@@ -26,7 +26,7 @@ gitlab builds list
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds&quot;
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds"
 ```
 
 #### List commit builds
@@ -38,7 +38,7 @@ gitlab builds commit
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds&quot;
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds"
 ```
 
 #### Get a single build
@@ -50,7 +50,7 @@ gitlab builds get
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8&quot;
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/8"
 ```
 
 #### Get build artifacts
@@ -62,7 +62,7 @@ gitlab builds artifacts
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts&quot;
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts"
 ```
 
 #### Cancel a build
@@ -74,7 +74,7 @@ gitlab builds cancel
 ##### **curl** alternative
 
 ```bash
-curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/cancel&quot;
+curl -X POST -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/1/cancel"
 ```
 
 #### Retry a build
@@ -86,7 +86,7 @@ gitlab builds retry
 ##### **curl** alternative
 
 ```bash
-curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/retry&quot;
+curl -X POST -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/1/retry"
 ```
 
 #### Erase a build
@@ -112,7 +112,7 @@ gitlab labels list
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/1/labels
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" https://gitlab.example.com/api/v3/projects/1/labels
 ```
 
 #### Create a new label
@@ -124,7 +124,7 @@ gitlab labels add
 ##### **curl** alternative
 
 ```bash
-curl --data &quot;name=feature&amp;color=#5843AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
+curl --data "name=feature&color=#5843AD" -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/labels"
 ```
 
 #### Delete a label
@@ -136,7 +136,7 @@ gitlab labels rm
 ##### **curl** alternative
 
 ```bash
-curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels?name=bug&quot;
+curl -X DELETE -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/labels?name=bug"
 ```
 
 #### Edit an existing label
@@ -148,7 +148,7 @@ gitlab labels update
 ##### **curl** alternative
 
 ```bash
-curl -X PUT --data &quot;name=documentation&amp;new_name=docs&amp;color=#8E44AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;
+curl -X PUT --data "name=documentation&new_name=docs&color=#8E44AD" -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/labels"
 ```
 
 ### merge_requests
@@ -198,7 +198,7 @@ gitlab merge_requests rm
 ##### **curl** alternative
 
 ```bash
-curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/4/merge_request/85
+curl -X DELETE -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" https://gitlab.example.com/api/v3/projects/4/merge_request/85
 ```
 
 #### 
@@ -216,7 +216,7 @@ gitlab merge_requests closes
 ##### **curl** alternative
 
 ```bash
-curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/76/merge_requests/1/closes_issues
+curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" https://gitlab.example.com/api/v3/projects/76/merge_requests/1/closes_issues
 ```
 
 ### projects
