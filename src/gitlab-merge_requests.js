@@ -5,9 +5,9 @@ import client     from './client';
 
 program
     .command('list [id]')
-    .description('List project builds')
+    .description('List merge requests')
     .action((id) => {
-        client.builds.getProjectBuilds(id)
+        client.merge_requests.getProjectMerge_requests(id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -20,10 +20,10 @@ program
 ;
 
 program
-    .command('commit [id] [sha]')
-    .description('List commit builds')
-    .action((id, sha) => {
-        client.builds.getProjectRepositoryCommitBuilds(id, sha)
+    .command('get [id] [merge_request_id]')
+    .description('Get single MR')
+    .action((id, merge_request_id) => {
+        client.merge_requests.getProjectMerge_request(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -36,10 +36,10 @@ program
 ;
 
 program
-    .command('get [id] [build_id]')
-    .description('Get a single build')
-    .action((id, build_id) => {
-        client.builds.getProjectBuild(id, build_id)
+    .command('commits [id] [merge_request_id]')
+    .description('Get single MR commits')
+    .action((id, merge_request_id) => {
+        client.merge_requests.getProjectMerge_requestCommits(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -52,10 +52,10 @@ program
 ;
 
 program
-    .command('artifacts [id] [build_id]')
-    .description('Get build artifacts')
-    .action((id, build_id) => {
-        client.builds.getProjectBuildArtifacts(id, build_id)
+    .command('changes [id] [merge_request_id]')
+    .description('Get single MR changes')
+    .action((id, merge_request_id) => {
+        client.merge_requests.getProjectMerge_requestChanges(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -68,10 +68,10 @@ program
 ;
 
 program
-    .command('cancel [id] [build_id]')
-    .description('Cancel a build')
-    .action((id, build_id) => {
-        client.builds.cancelProjectBuild(id, build_id)
+    .command('update [id] [merge_request_id]')
+    .description('Update MR')
+    .action((id, merge_request_id) => {
+        client.merge_requests.updateProjectMerge_request(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -84,10 +84,10 @@ program
 ;
 
 program
-    .command('retry [id] [build_id]')
-    .description('Retry a build')
-    .action((id, build_id) => {
-        client.builds.retryProjectBuild(id, build_id)
+    .command('rm [id] [merge_request_id]')
+    .description('Delete a merge request')
+    .action((id, merge_request_id) => {
+        client.merge_requests.deleteProjectMerge_request(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })
@@ -100,10 +100,26 @@ program
 ;
 
 program
-    .command('rm [id] [build_id]')
-    .description('Erase a build')
-    .action((id, build_id) => {
-        client.builds.deleteProjectBuild(id, build_id)
+    .command('accept [id] [merge_request_id]')
+    .description('')
+    .action((id, merge_request_id) => {
+        client.merge_requests.acceptProjectMergeRequest(id, merge_request_id)
+            .then(res => {
+                console.log(prettyjson.render(res.body, { indent: 4 }));
+            })
+            .catch(err => {
+                console.log(err.message);
+                process.exit(1);
+            })
+        ;
+    })
+;
+
+program
+    .command('closes [id] [merge_request_id]')
+    .description('List issues that will close on merge')
+    .action((id, merge_request_id) => {
+        client.merge_requests.getProjectMerge_requestCloses_issues(id, merge_request_id)
             .then(res => {
                 console.log(prettyjson.render(res.body, { indent: 4 }));
             })

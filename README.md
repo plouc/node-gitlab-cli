@@ -2,6 +2,7 @@
 
 - [builds](https://github.com/plouc/node-gitlab-cli#builds)
 - [labels](https://github.com/plouc/node-gitlab-cli#labels)
+- [merge_requests](https://github.com/plouc/node-gitlab-cli#merge_requests)
 - [projects](https://github.com/plouc/node-gitlab-cli#projects)
 
 
@@ -19,43 +20,43 @@ gitlab builds -h
 #### List project builds
 
 ```
-gitlab builds getProjectBuilds
+gitlab builds list
 ```
 
 #### List commit builds
 
 ```
-gitlab builds getProjectRepositoryCommitBuilds
+gitlab builds commit
 ```
 
 #### Get a single build
 
 ```
-gitlab builds getProjectBuild
+gitlab builds get
 ```
 
 #### Get build artifacts
 
 ```
-gitlab builds getProjectBuildArtifacts
+gitlab builds artifacts
 ```
 
 #### Cancel a build
 
 ```
-gitlab builds cancelProjectBuild
+gitlab builds cancel
 ```
 
 #### Retry a build
 
 ```
-gitlab builds retryProjectBuild
+gitlab builds retry
 ```
 
 #### Erase a build
 
 ```
-gitlab builds deleteProjectBuild
+gitlab builds rm
 ```
 
 ### labels
@@ -69,25 +70,81 @@ gitlab labels -h
 #### List labels
 
 ```
-gitlab labels getProjectLabels
+gitlab labels list
 ```
 
 #### Create a new label
 
 ```
-gitlab labels addProjectLabel
+gitlab labels add
 ```
 
 #### Delete a label
 
 ```
-gitlab labels deleteProjectLabels
+gitlab labels rm
 ```
 
 #### Edit an existing label
 
 ```
-gitlab labels updateProjectLabels
+gitlab labels update
+```
+
+### merge_requests
+
+List merge_requests commands
+
+```bash
+gitlab merge_requests -h
+```
+
+#### List merge requests
+
+```
+gitlab merge_requests list
+```
+
+#### Get single MR
+
+```
+gitlab merge_requests get
+```
+
+#### Get single MR commits
+
+```
+gitlab merge_requests commits
+```
+
+#### Get single MR changes
+
+```
+gitlab merge_requests changes
+```
+
+#### Update MR
+
+```
+gitlab merge_requests update
+```
+
+#### Delete a merge request
+
+```
+gitlab merge_requests rm
+```
+
+#### 
+
+```
+gitlab merge_requests accept
+```
+
+#### List issues that will close on merge
+
+```
+gitlab merge_requests closes
 ```
 
 ### projects
@@ -101,43 +158,43 @@ gitlab projects -h
 #### List projects
 
 ```
-gitlab projects getProjects
+gitlab projects list
 ```
 
 #### List owned projects
 
 ```
-gitlab projects getOwnedProjects
+gitlab projects owned
 ```
 
 #### List starred projects
 
 ```
-gitlab projects getStarredProjects
+gitlab projects starred
 ```
 
 #### List ALL projects
 
 ```
-gitlab projects getAllProjects
+gitlab projects all
 ```
 
 #### Get single project
 
 ```
-gitlab projects getProject
+gitlab projects get
 ```
 
 #### Get project events
 
 ```
-gitlab projects getProjectEvents
+gitlab projects events
 ```
 
 #### Create project
 
 ```
-gitlab projects addProject
+gitlab projects add
 ```
 
 #### Create project for user
@@ -149,13 +206,13 @@ gitlab projects addProjectsUser
 #### Edit project
 
 ```
-gitlab projects updateProject
+gitlab projects update
 ```
 
 #### Fork project
 
 ```
-gitlab projects forkProject
+gitlab projects fork
 ```
 
 #### Remove project

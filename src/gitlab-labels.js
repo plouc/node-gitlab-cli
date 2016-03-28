@@ -4,7 +4,7 @@ import client     from './client';
 
 
 program
-    .command('getProjectLabels [id]')
+    .command('list [id]')
     .description('List labels')
     .action((id) => {
         client.labels.getProjectLabels(id)
@@ -20,7 +20,7 @@ program
 ;
 
 program
-    .command('addProjectLabel [id]')
+    .command('add [id]')
     .description('Create a new label')
     .action((id) => {
         client.labels.addProjectLabel(id)
@@ -36,7 +36,7 @@ program
 ;
 
 program
-    .command('deleteProjectLabels [id]')
+    .command('rm [id]')
     .description('Delete a label')
     .action((id) => {
         client.labels.deleteProjectLabels(id)
@@ -52,7 +52,7 @@ program
 ;
 
 program
-    .command('updateProjectLabels [id]')
+    .command('update [id]')
     .description('Edit an existing label')
     .action((id) => {
         client.labels.updateProjectLabels(id)
