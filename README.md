@@ -1,6 +1,7 @@
 # node-gitlab-cli
 
 - [builds](https://github.com/plouc/node-gitlab-cli#builds)
+- [keys](https://github.com/plouc/node-gitlab-cli#keys)
 - [labels](https://github.com/plouc/node-gitlab-cli#labels)
 - [merge_requests](https://github.com/plouc/node-gitlab-cli#merge_requests)
 - [projects](https://github.com/plouc/node-gitlab-cli#projects)
@@ -93,6 +94,20 @@ curl -X POST -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.co
 
 ```bash
 gitlab builds rm
+```
+
+### keys
+
+List keys commands
+
+```bash
+gitlab keys -h
+```
+
+#### Get SSH key with user by ID of an SSH key
+
+```bash
+gitlab keys getKey
 ```
 
 ### labels
