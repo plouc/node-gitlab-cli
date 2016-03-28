@@ -1,11 +1,62 @@
 # node-gitlab-cli
 
+- [builds](https://github.com/plouc/node-gitlab-cli#builds)
 - [labels](https://github.com/plouc/node-gitlab-cli#labels)
 - [projects](https://github.com/plouc/node-gitlab-cli#projects)
 
 
 ## Available commands
 
+
+### builds
+
+List builds commands
+
+```bash
+gitlab builds -h
+```
+
+#### List project builds
+
+```
+gitlab builds getProjectBuilds
+```
+
+#### List commit builds
+
+```
+gitlab builds getProjectRepositoryCommitBuilds
+```
+
+#### Get a single build
+
+```
+gitlab builds getProjectBuild
+```
+
+#### Get build artifacts
+
+```
+gitlab builds getProjectBuildArtifacts
+```
+
+#### Cancel a build
+
+```
+gitlab builds cancelProjectBuild
+```
+
+#### Retry a build
+
+```
+gitlab builds retryProjectBuild
+```
+
+#### Erase a build
+
+```
+gitlab builds deleteProjectBuild
+```
 
 ### labels
 
